@@ -1,0 +1,4 @@
+# 컨펌용 임시 사이트입니다. 검색 색인을 원하지 않습니다.
+# 운영 사이트는 https://mang9.github.io/bcity-homepage/ 입니다.
+User-agent: *
+Disallow: /

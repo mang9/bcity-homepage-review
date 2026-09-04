@@ -1,0 +1,34 @@
+.DS_Store
+# ⚠ **`/` 로 앵커한다.** 앵커가 없으면 모든 깊이에서 매칭돼
+#   tools/parity/capture.html 처럼 이름이 같은 파일이 조용히 무시된다(2026-08-20 실제로 겪었다).
+#   원래 의도는 §8.4 의 **루트** 캡처 사본 하나를 빼는 것이다.
+/capture.html
+
+# Figma 재캡처용 임시 파일
+_filetest*.html
+_t.html
+
+# index.html 이 참조하지 않는 예비 자산 (약 30MB)
+assets/map_02.png
+assets/map03.png
+assets/vid/districts.mp4
+assets/vid/districts-hevc.mp4
+assets/vid/concept.mp4
+assets/vid/concept-hevc.mp4
+
+# ── 공개 저장소에서 제외 (내부 문서) ────────────────────────
+# CLAUDE.md  : Figma 파일 키·노드 ID·내부 작업 절차가 들어 있다
+# CONTENT.md : "기획서 내부 수치 불일치" 등 미확정 내부 검토 내용이 있다
+# 로컬에는 그대로 남아 있고, 공개 저장소에만 올라가지 않는다.
+CLAUDE.md
+CONTENT.md
+
+# npm
+node_modules/
+
+# 로컬 개발 서버 설정 — runtimeArgs 에 머신별 절대경로가 박혀 있다.
+# 원본·미러 양쪽에 각각 두고 rsync 로는 넘기지 않는다(CLAUDE.md §11.9).
+.claude/
+
+# 관리자 화면 시안 — 디자인 인계용이며 공개 배포에 포함하지 않는다(tools/build/admin.mjs).
+# 로그인처럼 보이는 화면이 실서비스 도메인에 올라가면 막는 것이 없는데도 막힌 것처럼 보인다.
